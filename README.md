@@ -3,7 +3,7 @@
 Clone this repository
 
 ```bash
-git clone git@github.com:bitfumes/real-time-single-page-forum-app.git
+git clone git@github.com:twiragith/MathOps.git
 ```
 
 Go inside the directory
