@@ -10,7 +10,9 @@
                 <v-card-title >
                 <div>
                     <h3 class="text-xs-center">you are about to face a mathOps <strong class="red--text text--lighten-1">Fixed</strong>  quiz...</h3>
-                    <h3 class="text-xs-center">this test includes <strong class="red--text text--lighten-1">{{ this.fixNoOfQuiz }} quizes</strong>with following fixed configurations</h3>
+                    <h3 class="text-xs-center">this test includes <strong class="red--text text--lighten-1">15 quizes</strong>with following fixed configurations</h3>
+                    <h3 class="text-xs-center"><strong class="red--text text--lighten-1">Make sure to hit save and restart button after you finish answering.</strong></h3>
+                    <h3 class="text-xs-center"><strong class="red--text text--lighten-1">If the timer resets you, you will not be included in the ranking even after you finised the whole set of questions!!!</strong></h3>
                 </div>
                 </v-card-title>
             </v-layout>
@@ -104,6 +106,10 @@
                 </router-link>
             </div>
             <v-btn @click="showConfigOff()" color="info">Back</v-btn>
+            <br>
+            <br>
+            <br>
+            <hr>
         </v-flex>
     </div>
     </div>
@@ -116,7 +122,7 @@ export default {
     data(){
         return {
         min:20,
-        max:100,
+        max:80,
         text: 'center',
         icon: 'justify',
         toggle_one: 2,

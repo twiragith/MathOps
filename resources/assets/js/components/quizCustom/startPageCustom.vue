@@ -109,8 +109,8 @@ import { mapState,mapMutations,mapGetters } from 'vuex'
 export default {
     data(){
         return {
-        min:'',
-        max:'',
+        min:'1',
+        max:'200',
         text: 'center',
         icon: 'justify',
         toggle_one: 0,

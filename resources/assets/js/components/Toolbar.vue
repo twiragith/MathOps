@@ -30,7 +30,7 @@ export default {
       items: [
         { title: "Forum", to: "/forum", show: true },
         { title: "QuizApp", to: "/startPage", show: true },
-        { title: "Test", to: "/test", show: User.loggedIn() },
+        /* { title: "Test", to: "/test", show: User.loggedIn() }, */
         { title: "My History", to: "/myHistory", show: User.loggedIn() },
         { title: "Ranking", to: "/rank", show: User.loggedIn() },
         { title: "Ask Question", to: "/ask", show: User.loggedIn() },

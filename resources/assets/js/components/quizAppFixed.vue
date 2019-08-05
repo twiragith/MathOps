@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <circular-count-down-timer
-        :initial-value="3"
+        :initial-value="60"
         :stroke-width="5"
         :seconds-stroke-color="'#f00'"
         :minutes-stroke-color="'#0ff'"
@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <transition name="flip" mode="out-in">
-                    <div v-if="localCounter < 2">
+                    <div v-if="localCounter < 15">
                     <component :is="mode" @answered="answered($event)" @confirmed="mode = 'app-question'"></component>
                     </div>
                     <div v-else class="text-center">

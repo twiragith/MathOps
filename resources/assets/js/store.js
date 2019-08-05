@@ -20,8 +20,8 @@ export default new Vuex.Store({
         singleOpFix:0,
         singleOpModeFix:0,
         mathOpsOnFix:0,
-        mathOpsMinFix:40,
-        mathOpsMaxFix:50,
+        mathOpsMinFix:20,
+        mathOpsMaxFix:100,
     },
 
     getters:{
