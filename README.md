@@ -9,7 +9,7 @@ git clone git@github.com:twiragith/MathOps.git
 Go inside the directory
 
 ```bash
-cd real-time-single-page-forum-app
+cd MathOps
 ```
 
 Now install composer
