@@ -66,3 +66,15 @@ Then run npm to compile the vue into laravel mix
 npm run dev
 });
 ```
+Get a JWT secret run following code
+```bash
+php artisan jwt:secret
+});
+```
+
+Then run laravel devolpment server
+
+```bash
+php artisan serve
+});
+```
