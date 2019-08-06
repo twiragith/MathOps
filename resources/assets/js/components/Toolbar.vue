@@ -29,11 +29,11 @@ export default {
       loggedIn: User.loggedIn(),
       items: [
         { title: "Forum", to: "/forum", show: true },
-        { title: "QuizApp", to: "/startPage", show: true },
+        { title: "Ask Question", to: "/ask", show: User.loggedIn() },
         /* { title: "Test", to: "/test", show: User.loggedIn() }, */
         { title: "My History", to: "/myHistory", show: User.loggedIn() },
         { title: "Ranking", to: "/rank", show: User.loggedIn() },
-        { title: "Ask Question", to: "/ask", show: User.loggedIn() },
+        { title: "QuizApp", to: "/startPage", show: true },
         { title: "QuizApp Custom", to: "/startPageCustom", show: User.loggedIn() },
         { title: "QuizApp Fixed", to: "/startPageFixed", show: User.loggedIn() },
         { title: "Category", to: "/category", show: User.admin() },

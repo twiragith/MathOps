@@ -11,9 +11,9 @@ class Reply extends Model
     {
         parent::boot();
 
-        static::creating(function ($reply) {
+        /* static::creating(function ($reply) {
             $reply->user_id = auth()->id();
-        });
+        }); */
     }
 
 

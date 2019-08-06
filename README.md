@@ -12,7 +12,7 @@ Go inside the directory
 cd MathOps
 ```
 
-Now install composer
+Now run composer to get laravel dependacies
 
 ```bash
 composer install
@@ -24,59 +24,45 @@ Generate key on .env file
 cp .env.example .env
 php artisan key:generate
 ```
-
-## Setting for Pusher
-
-Go to .env file and change Broadcast drive to pusher
-
-```
-BROADCAST_DRIVER=pusher
-```
-
-and also give credentials of your pusher on .env file
-
-```
-PUSHER_APP_ID=xxxxxx
-PUSHER_APP_KEY=xxxxxxxxxxxxxxxxxxxx
-PUSHER_APP_SECRET=xxxxxxxxxxxxxxxxxxxxxx
-PUSHER_APP_CLUSTER=xxx
-```
-
-open bootstrap.js file and provide pusher key there also.
-
-```javascript
-window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: "xxxxxxxxxxxxxxxxxxxxx",
-    cluster: "xxx",
-    encrypted: true,
-    ...
-```
-
-## Jobs table
-
-_As this project uses queue so we need to settings related to that also._
-
-Now make changes for queue driver on .env file
-
-```
-QUEUE_DRIVER=database
-```
-
-Generate jobs table and migrate it
+Then set-up the database connection. fill the following data according to your database.
 
 ```bash
-php artisan queue:table
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+Then migrate the tables in to the databse
+```bash
 php artisan migrate
 ```
-
-Now we have jobs table, and to make system real time, we need to dispatch queued events.
-
-So lets start queue worker for that.
+Then comment out the folowing code part in "app -> Model -> Reply.php"
 
 ```bash
-php artisan queue:work
+/* static::creating(function ($reply) {
+    $reply->user_id = auth()->id();
+}); */
+```
+Then seed the database with laravel factories
+```bash
+php artisan db:seed
 ```
 
-keep this running.
+Then  remove comment in "app -> Model -> Reply.php"
 
+```bash
+static::creating(function ($reply) {
+    $reply->user_id = auth()->id();
+});
+```
+Then run npm to get vue dependacies
+
+```bash
+npm install
+});
+```
+Then run npm to compile the vue into laravel mix
+
+```bash
+npm run dev
+});
+```
